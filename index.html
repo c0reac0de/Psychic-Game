@@ -12,29 +12,27 @@ alert("Let's play a game!");
 
 
 var questionGuess=prompt("guess what letter I am thinking of?");
-
 console.log(questionGuess);
 
-var alpha=[q,w,e,r,t,y,u,i,o,p];
+var alpha=['q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m'];
+var alphaGuess=[];
+console.log(alphaGuess);
+
 var index=parseInt(questionGuess);
-var letters=alpha[index];
+var letters=questionGuess;
 console.log(letters);
 
-var final=letters;
+if (alpha['random']===questionGuess) {
+document.write('you won!') 
+ 
+}
 
-document.write('your guess is'+final);
-
-
-
+document.write('your guess is' + letters);
   </script>
     </meta>
   </head>
   <body>
-   The Psychic Game
-   
-   Guess what letter I am thinking of??
-    Win:
-    Lose: 
+  
    
     </body>
 </html>

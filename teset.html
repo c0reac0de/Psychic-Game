@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Psychic Game</title>
+    <script type="text/javascript">
+
+int length = 8;
+
+String all = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+           + "abcdefghijklmnopqrstuvwxyz"
+           + digits + specials;
+Random rnd = new Random();
+List<String> result = new ArrayList<>();
+Consumer<String> appendChar = s ->
+        result.add("" + s.charAt(rnd.nextInt(s.length())));
+
+while (result.size() < length)
+    appendChar.accept(all);
+Collections.shuffle(result, rnd);
+String str = String.join("", result);
+
+</script>
+    </meta>
+  </head>
+  <body>
+  
+   
+    </body>
+</html>
