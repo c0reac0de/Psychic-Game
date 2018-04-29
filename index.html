@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"></meta>
     <title>Psychic Game</title>
-    <script type="text/javascript">
-var win=0;
-var lose=0;
-var timesGuessed=0;
-var lettersUsed=0;
-alert("Let's play a game!");
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ </head>
+
+<body>
+
+<h1>
+  Let's play a guessing game
+</h1>
+<hr>
+<div id='wins'>
+  Wins:
+</div>
+<div id='losses'>
+  Losses:
+</div>
+<div id='guessed letters'>
+  Guesses left:<input type='text'>
+</div>
+<div id='guesses remaining'>
+guesses so far:<span class= 'decreaseNumber'>10</span>
+</div>
+
+<script type="text/javascript">
+i=0;
+
+$(document).ready(function(){
 
 
-var questionGuess=prompt("guess what letter I am thinking of?");
-console.log(questionGuess);
+$('input').keyup(function(){
+$(".decreaseNumber").html(parseInt($(".decreaseNumber").html())-1);
 
-var alpha=['q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m'];
-var alphaGuess=[];
-console.log(alphaGuess);
+})
 
-var index=parseInt(questionGuess);
-var letters=questionGuess;
-console.log(letters);
 
-if (alpha['random']===questionGuess) {
-document.write('you won!') 
- 
-}
 
-document.write('your guess is' + letters);
-  </script>
-    </meta>
-  </head>
-  <body>
-  
-   
-    </body>
+
+
+
+})
+
+//clear function outside of doc.ready
+</script>
+</body>
 </html>
+
+
+
+
+
+
+
